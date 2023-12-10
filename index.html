@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Your CV Builder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/style/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- START HERE -->
+        <h1>CV Builder</h1>
+        <br>
+        <p>Want a simple, professional CV? Simply enter your information below</p>
+        <p> <em>PLEASE NOTE: WE DO NOT STORE YOUR INFORMATION YET, HENCE YOU SHOULD DOWNLOAD THE CV ON YOUR DEVICE.</em></p>
+        <p> <em>ALL INFORMATION WILL BE LOST WHEN YOU CLOSE THIS WINDOW. </em></p>
+
+        <!-- MAIN CONTAINER FOR INPUT AND RESULTS - START -->
+        <div id="parent_container" class="parent_container">
+            
+        <!-- INPUT CONTAINER - START -->
+            <div id="input_container" class="input_container">
+
+                <!-- PERSONAL DETAILS - START -->
+                <div id="personalDetailsContainer" class="input_container">
+                <h2>Personal details</h2>
+
+                    <form id="personalDetailsForm">
+                        <legend for="firstName">First Name</legend>
+                        <input type="text" id="firstName" name="firstName">
+                    
+                        <legend for="lastName">Family Name</legend>
+                        <input type="text" id="lastName" name="lastName">
+
+                        <legend for="profession">Profession</legend>
+                        <input type="text" id="profession" name="profession">
+
+
+                        <legend for="intro">Brief Introduction</legend>
+                        <textarea id="intro" name="intro"></textarea>
+
+
+                        <legend for="phone">Phone Number</legend>
+                        <input type="text" id="phone" name="phone">
+
+
+                        <legend for="email">E-mail Address</legend>
+                        <input type="text" id="email" name="email">
+
+
+                        <legend for="homeAddress">Address</legend>
+                        <input type="text" id="homeAddress" name="homeAddress">
+
+
+                        <legend for="city">City</legend>
+                        <input type="text" id="city" name="city">
+
+
+                        <legend for="postalCode">Postal Code</legend>
+                        <input type="text" id="postalCode" name="postalCode">
+
+
+                        <legend for="website">Website</legend>
+                        <input type="text" id="website" name="website">
+
+
+                    </form>
+                </div>
+                <!-- PERSONAL DETAILS - END -->
+                
+
+
+                <!-- WORK EXPERIENCE - START -->
+                <div id="professionalExperienceContainer" class="input_container">
+                    <h2>Professional Experience</h2>
+    
+                        <form id="professionalExperienceForm">
+                            <button >- Remove Experience </button>
+                            <br> <br>
+                            <legend for="position">Position</legend>
+                            <input type="text" id="position" name="position">
+                        
+                            <legend for="employer">Employer</legend>
+                            <input type="text" id="employer" name="employer">
+    
+                            <legend for="workCity">City</legend>
+                            <input type="text" id="workCity" name="workCity">
+    
+                            <legend for="startDate">Start Date</legend>
+                            <input type="date" id="startDate" name="startDate">
+    
+    
+                            <legend for="endDate">End Date</legend>
+                            <input type="date" id="endDate" name="endDate">
+                            <input type="radio" id="workHere">I work heres
+    
+                            <legend for="duties">Duties</legend>
+                            <textarea type="text" id="duties" name="duties"></textarea><br>
+                            
+                            <button >+ Add Experience </button>
+
+
+
+    
+                        </form>
+                    </div>
+                    <!-- WORK EXPERIENCE  - END -->                
+
+
+                <!-- EDUCATION - START -->
+                <div id="educationContainer" class="input_container">
+                    <h2>Education</h2>
+    
+                        <form id="educationForm" name="educationForm">
+                            <button >- Remove Education </button>
+                            <br> <br>
+                            <legend for="position">School Name</legend>
+                            <input type="text" id="position" name="firstName">
+                        
+                            <legend for="employer">Field Studied</legend>
+                            <input type="text" id="employer" name="employer">
+    
+                            <legend for="degreeLevel">Degree Level</legend>
+                            <input type="text" id="degreeLevel" name="degreeLevel">
+
+                            <legend for="eduCity">City</legend>
+                            <input type="text" id="eduCity" name="eduCity">
+    
+                            <legend for="eduStartDate">Start Date</legend>
+                            <input type="date" id="eduStartDate" name="eduStartDate">
+    
+    
+                            <legend for="eduEndDate">Graduation Date (or expected)</legend>
+                            <input type="date" id="eduEndDate" name="eduEndDate"><br>
+                            
+                            <button >+ Add Education </button>
+
+
+
+    
+                        </form>
+                    </div>
+                    <!-- EDUCATION  - END -->      
+                    
+                    
+                <!-- SKILLS - START -->
+                <div id="skillsContainer" class="input_container">
+                    <h2>Skills</h2>
+    
+                        <form name="skillsForm">
+                            
+                            <legend for="skill1">Skill 1</legend>
+                            <input type="text" id="skill1" name="skill1">
+                            <select id="skill1Level" name="skill1Level">
+                                <option value="1">Beginner</option>
+                                <option value="5">Good</option>
+                                <option value="10">Pro</option>
+                                <option value="15">Expert</option>
+
+                            </select>
+                            <br>
+                            
+                            <legend for="skill1">Skill 2</legend>
+                            <input type="text" id="skill1" name="skill1">
+                            <select id="skill1Level" name="skill1Level">
+                                <option value="1">Beginner</option>
+                                <option value="5">Good</option>
+                                <option value="10">Pro</option>
+                                <option value="15">Expert</option>
+
+                            </select>
+                            <br>
+                            
+                            <legend for="skill1">Skill 3</legend>
+                            <input type="text" id="skill1" name="skill1">
+                            <select id="skill1Level" name="skill1Level">
+                                <option value="1">Beginner</option>
+                                <option value="5">Good</option>
+                                <option value="10">Pro</option>
+                                <option value="15">Expert</option>
+
+                            </select>
+                            <br>
+
+                            <button >+ Add Skill </button>
+                        </form>
+                    </div>
+                    <!-- SKILLS  - END -->        
+
+
+                <!-- LANGUAGES - START -->
+                <div id="languagesContainer" class="input_container">
+                    <h2>Languages</h2>
+    
+                        <form name="languagesForm">
+                            
+                            <legend for="language1">Language 1</legend>
+                            <input type="text" id="language1" name="language1">
+                            <select id="language1level" name="skill1Level">
+                                <option value="1">Beginner</option>
+                                <option value="5">Good</option>
+                                <option value="10">Professional</option>
+                                <option value="15">Native</option>
+
+                            </select>
+                            <br>
+
+                            <legend for="language1">Language 2</legend>
+                            <input type="text" id="language2" name="language2">
+                            <select id="language2level" name="language2level">
+                                <option value="1">Beginner</option>
+                                <option value="5">Good</option>
+                                <option value="10">Professional</option>
+                                <option value="15">Native</option>
+
+                            </select>
+                            <br>
+
+
+                            <legend for="language1">Language 3</legend>
+                            <input type="text" id="language3" name="language3">
+                            <select id="language3level" name="language3Level">
+                                <option value="1">Beginner</option>
+                                <option value="5">Good</option>
+                                <option value="10">Professional</option>
+                                <option value="15">Native</option>
+
+                            </select>
+                            <br>
+
+                        
+
+                            <button >+ Add Skill </button>
+                        </form>
+                    </div>
+                    <!-- LANGUAGES  - END -->    
+                    
+                    
+                <!-- CERTIFICATE - START -->
+                <!-- OPTIONAL SO, IF STATEMENT SHOULD BE USED-->
+                <div id="certificateContainer" class="input_container">
+                    <h2>Certificates</h2>
+    
+                        <form name="certificateForm">
+                            
+                            <legend for="certificate1">Certificate 1</legend>
+                            <input type="text" id="certificate1" name="certificate1">
+                            <br>
+
+                            <legend for="certificate2">Certificate 2</legend>
+                            <input type="text" id="certificate2" name="certificate2">
+                            <br>
+
+                            <legend for="certificate3">Certificate 3</legend>
+                            <input type="text" id="certificate3" name="certificate3">
+                            <br>
+                          
+
+                            <button >+ Add Certificate </button>
+                        </form>
+                    </div>
+                    <!-- CERTIFICATE  - END -->     
+                  
+
+
+
+            </div>
+            <!-- INPUT CONTAINER - END-->
+            
+       
+        
+        <!-- --------------- SEPARATION BETWEEN INPUT AND RESULTS ---------------- -->
+
+
+            <!-- RESULTS CONTAINER - START -->
+            <div id="results_container" class="results_container">
+
+
+
+
+
+
+
+
+            </div>
+            <!-- RESULTS CONTAINER - END -->
+            
+        
+        </div>
+        <!-- MAIN CONTAINER FOR INPUT AND RESULTS -END -->
+        
+
+
+
+        <script src="/scripts/cv_builder.js" async defer></script>
+    </body>
+</html>
