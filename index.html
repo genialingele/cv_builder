@@ -30,11 +30,25 @@
         <!-- INPUT CONTAINER - START -->
             <div id="input_container" class="input_container">
 
+                <!-- A SIMPLE DIV FOR THE PROGRESS BAR-->
+
+                
+                <div id="progressContainer" class="progressContainer">
+                   <div id="personalProgress" class="progress"><p>PERSONAL DETAILS</p></div>
+                    <div id="professionalProgress" class="progress"><p>EXPERIENCE</p></div>
+                    <div id="educationProgress" class="progress"><p>EDUCATION</p></div>
+                    <div id="skillsProgress" class="progress"><p>SKILLS</p></div>
+                    <div id="langugesProgress" class="progress"><p>LANGUAGES</p></div>
+                    <div id="certProgress" class="progress"><p>CERTIFICATES</p></div>
+                </div>
+                
+                
+
                 <!-- PERSONAL DETAILS - START -->
-                <div id="personalDetailsContainer" class="input_container">
+                <div id="personalContainer" class="personalContainer">
                 <h2>Personal details</h2>
 
-                    <form id="personalDetailsForm">
+                    <form id="personalDetailsForm" >
                         <legend for="firstName">First Name</legend>
                         <input type="text" id="firstName" name="firstName">
                     
@@ -44,43 +58,37 @@
                         <legend for="profession">Profession</legend>
                         <input type="text" id="profession" name="profession">
 
-
                         <legend for="intro">Brief Introduction</legend>
                         <textarea id="intro" name="intro"></textarea>
-
 
                         <legend for="phone">Phone Number</legend>
                         <input type="text" id="phone" name="phone">
 
-
                         <legend for="email">E-mail Address</legend>
                         <input type="text" id="email" name="email">
-
 
                         <legend for="homeAddress">Address</legend>
                         <input type="text" id="homeAddress" name="homeAddress">
 
-
                         <legend for="city">City</legend>
                         <input type="text" id="city" name="city">
-
 
                         <legend for="postalCode">Postal Code</legend>
                         <input type="text" id="postalCode" name="postalCode">
 
-
                         <legend for="website">Website</legend>
                         <input type="text" id="website" name="website">
+                        <br>
 
+                        <button id="nextBtnPersonal">NEXT &rightarrow; </button>
 
                     </form>
                 </div>
                 <!-- PERSONAL DETAILS - END -->
                 
 
-
                 <!-- WORK EXPERIENCE - START -->
-                <div id="professionalExperienceContainer" class="input_container">
+                <div id="professionalContainer" class="professionalContainer">
                     <h2>Professional Experience</h2>
     
                         <form id="professionalExperienceForm">
@@ -97,8 +105,7 @@
     
                             <legend for="startDate">Start Date</legend>
                             <input type="date" id="startDate" name="startDate">
-    
-    
+
                             <legend for="endDate">End Date</legend>
                             <input type="date" id="endDate" name="endDate">
                             <input type="radio" id="workHere">I work heres
@@ -108,16 +115,18 @@
                             
                             <button >+ Add Experience </button>
 
+                            <br><br>
 
-
+                            <button id="prevBtnProfessional">&leftarrow; BACK </button>
+                            <button id="nextBtnProfessional">NEXT &rightarrow;</button>
     
                         </form>
                     </div>
-                    <!-- WORK EXPERIENCE  - END -->                
+                <!-- WORK EXPERIENCE  - END -->                
 
 
                 <!-- EDUCATION - START -->
-                <div id="educationContainer" class="input_container">
+                <div id="educationContainer" class="educationContainer">
                     <h2>Education</h2>
     
                         <form id="educationForm" name="educationForm">
@@ -143,17 +152,18 @@
                             <input type="date" id="eduEndDate" name="eduEndDate"><br>
                             
                             <button >+ Add Education </button>
+                            <br> <br>
 
+                            <button id="prevBtnEducation"> &leftarrow; BACK </button>
+                            <button id="nextBtnEducation">NEXT &rightarrow;</button>
 
-
-    
                         </form>
                     </div>
                     <!-- EDUCATION  - END -->      
                     
                     
                 <!-- SKILLS - START -->
-                <div id="skillsContainer" class="input_container">
+                <div id="skillsContainer" class="skillsContainer">
                     <h2>Skills</h2>
     
                         <form name="skillsForm">
@@ -192,13 +202,18 @@
                             <br>
 
                             <button >+ Add Skill </button>
+                            <br> <br>
+
+                            <button id="prevBtnSkill">&leftarrow; BACK </button>
+                            <button id="nextBtnSkill">NEXT &rightarrow; </button>
+
                         </form>
                     </div>
                     <!-- SKILLS  - END -->        
 
 
                 <!-- LANGUAGES - START -->
-                <div id="languagesContainer" class="input_container">
+                <div id="languagesContainer" class="languagesContainer">
                     <h2>Languages</h2>
     
                         <form name="languagesForm">
@@ -237,9 +252,11 @@
                             </select>
                             <br>
 
-                        
+                            <button >+ Add Language </button>
+                            <br><br>
 
-                            <button >+ Add Skill </button>
+                            <button id="prevBtnLang">&leftarrow; BACK </button>
+                            <button id="nextBtnLang">NEXT &rightarrow; </button>
                         </form>
                     </div>
                     <!-- LANGUAGES  - END -->    
@@ -247,7 +264,7 @@
                     
                 <!-- CERTIFICATE - START -->
                 <!-- OPTIONAL SO, IF STATEMENT SHOULD BE USED-->
-                <div id="certificateContainer" class="input_container">
+                <div id="certificateContainer" class="certificateContainer">
                     <h2>Certificates</h2>
     
                         <form name="certificateForm">
@@ -266,7 +283,13 @@
                           
 
                             <button >+ Add Certificate </button>
+
+                            <br> <br>
+                            <button id="prevBtnCert">&leftarrow; BACK </button>
+                            <button id="completeBtn">COMPLETE &2713;</button>
                         </form>
+
+                        <br><br>
                     </div>
                     <!-- CERTIFICATE  - END -->     
                   
@@ -282,14 +305,11 @@
 
 
             <!-- RESULTS CONTAINER - START -->
-            <div id="results_container" class="results_container">
-
-
-
-
-
-
-
+            <div id="resultsContainer" class="resultsContainer">
+                <h1>FINAL CV IS THIS </h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Sequi nemo tenetur suscipit esse veritatis saepe nisi minima? 
+                    Earum culpa, nihil beatae illo animi, quam dignissimos sit ipsum dolores temporibus molestiae!</p>
 
             </div>
             <!-- RESULTS CONTAINER - END -->
@@ -298,7 +318,6 @@
         </div>
         <!-- MAIN CONTAINER FOR INPUT AND RESULTS -END -->
         
-
 
 
         <script src="/scripts/cv_builder.js" async defer></script>
