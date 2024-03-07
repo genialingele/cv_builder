@@ -55,6 +55,17 @@ const completeBtn = document.getElementById("completeBtn");
 
 
 
+
+//NOW LISTEN TO THE "LINKS" TO THE SECTIONS
+const personalProgress = document.getElementById("personalProgress");
+const professionalProgress = document.getElementById("professionalProgress");
+const educationProgress = document.getElementById("educationProgress");
+const skillsProgress = document.getElementById("skillsProgress");
+const langProgress = document.getElementById("langProgress");
+const certProgress = document.getElementById("certProgress");
+
+
+
 //INITIALLY, WE WANT ALL OTHER SECTIONS TO BE HIDDEN
 function hideOtherThanPersonal (){
     personalContainer.style.display = "block";
@@ -149,6 +160,36 @@ const resultsContainerPID = resultsContainer.parentElement.parentElement.id;
 
 //PROGRESS BAR
 //We want the color of the section tab to change when the user progresses
+personalProgress.addEventListener("click", 
+        function(){
+            hideOtherThanThis(nextBtnPersonalPID);
+        }
+)
+professionalProgress.addEventListener("click", 
+        function(){
+            hideOtherThanThis(nextBtnProfessionalPID);
+        }
+)
+educationProgress.addEventListener("click", 
+        function(){
+            hideOtherThanThis(nextBtnEducationPID);
+        }
+)
+skillsProgress.addEventListener("click", 
+        function(){
+            hideOtherThanThis(nextBtnSkillsPID);
+        }
+)
+langProgress.addEventListener("click", 
+        function(){
+            hideOtherThanThis(nextBtnLangPID);
+        }
+)
+certProgress.addEventListener("click", 
+        function(){
+            hideOtherThanThis(prevBtnCertPID);
+        }
+)
 
 
 

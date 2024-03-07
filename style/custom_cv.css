@@ -1,0 +1,214 @@
+/*I am hoping to use this for the second template the user will select
+/* Copyright of GENIAL INGELE. This calculator is merely an estimation of what your bond would cost and the other costs associated with it.
+    Hence, GENIAL INGELE is not liable for any inaccuracies found in this code. We are trying to guide you in making a decision in the best way we can, 
+    but the accurate information will be given to you by your bank. 
+    
+    NOTE: Data found on this code is based on South African laws and fees.
+    
+    DATE: 24 SEPTEMBER 2023
+    
+    GENIAL INGELE 
+    */
+
+
+    /*TODO 
+    * Automatically separate large numbers with comma or point when typed in
+    * Loop through 2 arrays to compare and assign values based on a set of conditions. E.g. loan amount vs deeds office fees matching. 
+    */
+
+
+/* --- CONTAINERS --- */ 
+/* Using the "*" symbol, we are referring to all elements */
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /*  We are removing the arrows from input field */
+  /* Hide the arrows from the input field */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  text-align: left;
+  }
+  
+  body{
+    background-color: #f7f7f7;
+  }
+  
+  .parent_container{
+    width: 100%;
+    background-color: #f7f7f7 ;
+  }
+  
+  
+  .input_container{
+    background-color: #FFFFFF;
+    padding: 20px;
+  }
+  
+  /* SECTION CONTAINERS (Personal, Professfional, Education) */
+  
+  .personalContainer{
+  
+  
+  }
+  
+  .professionalContainer{
+  
+  
+  }
+  
+  
+  .educationContainer{
+  
+  
+  }
+  
+  
+  .skillsContainer{
+  
+  
+  }
+  
+  .languagesContainer{
+  
+  
+  
+  }
+  
+  
+  .certificateContainer{
+  
+  
+  }
+  
+  
+  
+  /*PROGRESS CONTAINER */
+  
+  .progressContainer{
+    background-color: hsla(0, 0%, 88%, 0.819);
+    display: flex;
+    width: 100%;
+    margin: 2px;
+    position: sticky;
+    top: 0;
+  }
+  
+  
+  .progress{
+    margin: 0px;
+    flex:1;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .progress:hover{
+    background-color: black;
+    color: #FFFFFF;
+  }
+  
+  .progress:active{
+    background-color: #002222;
+  }
+  
+  /* RESULTS OR CV OUTCOME*/
+  
+  .resultsContainer{
+      background-color: rgba(0,10,100, 0.7);
+   
+  }
+  
+  
+  
+  /* --- BASICS --- */
+  
+  h1{ 
+    text-align: center;
+  
+  }
+  
+  h2{
+    line-height: 18pt;
+    font-size: 18pt;
+  }
+  
+  h3, h4{
+    line-height: 18pt;
+    font-size: 14pt;
+  }
+  
+  select{
+    padding: 10px;
+    width: 120px;
+    font-size: large;
+    background-color: #e8e7e7;
+    color: black;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  input{
+    font-size: 14pt;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 250px;
+  }
+  
+  legend{
+    font-size: 12pt;
+    font-weight:bold;
+  }
+  
+  textarea{
+    margin-bottom: 20px;
+    width: 400px;
+    height: 100px;
+    text-wrap:stable ;
+  }
+  
+  /* --- BUTTONS --- */
+  .submitBtn{
+  
+  }
+  
+  .resetBtn{
+  
+  }
+  
+  .previousBtn{
+  
+  }
+  
+  .nextBtn{
+  
+  }
+  
+  /*Now, each button will have a unique ID 
+  because we each of them send you  to  specific section.
+  They hide the current section and show the next one.*/
+  
+  /*FOR PERSONAL DETAILS */
+  #nextBtnPersonal{
+  
+  }
+  
+  
+  /*FOR PROFESSIONAL EXPERIENCE DETAILS */
+  #nextBtnPro{
+  
+  }
+  
+  #nextBtnPro{
+  
+  }
+  
+  

@@ -34,12 +34,13 @@
 
                 
                 <div id="progressContainer" class="progressContainer">
-                   <div id="personalProgress" class="progress"><p>PERSONAL DETAILS</p></div>
+                   <div id="personalProgress" class="progress"><p>PROFILE</p></div>
                     <div id="professionalProgress" class="progress"><p>EXPERIENCE</p></div>
                     <div id="educationProgress" class="progress"><p>EDUCATION</p></div>
                     <div id="skillsProgress" class="progress"><p>SKILLS</p></div>
-                    <div id="langugesProgress" class="progress"><p>LANGUAGES</p></div>
+                    <div id="langProgress" class="progress"><p>LANGUAGES</p></div>
                     <div id="certProgress" class="progress"><p>CERTIFICATES</p></div>
+                    <div id="completeProgress" class="progress"><p>COMPLETE</p></div>
                 </div>
                 
                 
@@ -49,35 +50,35 @@
                 <h2>Personal details</h2>
 
                     <form id="personalDetailsForm" >
-                        <legend for="firstName">First Name</legend>
-                        <input type="text" id="firstName" name="firstName">
+                        <legend for="firstName" >First Name</legend>
+                        <input type="text" id="firstName" name="firstName" maxlength="25">
                     
                         <legend for="lastName">Family Name</legend>
-                        <input type="text" id="lastName" name="lastName">
+                        <input type="text" id="lastName" name="lastName" maxlength="25">
 
                         <legend for="profession">Profession</legend>
-                        <input type="text" id="profession" name="profession">
+                        <input type="text" id="profession" name="profession" maxlength="50">
 
                         <legend for="intro">Brief Introduction</legend>
-                        <textarea id="intro" name="intro"></textarea>
+                        <textarea id="intro" name="intro" maxlength="300"></textarea>
 
                         <legend for="phone">Phone Number</legend>
-                        <input type="text" id="phone" name="phone">
+                        <input type="text" id="phone" name="phone" maxlength="13">
 
                         <legend for="email">E-mail Address</legend>
-                        <input type="text" id="email" name="email">
+                        <input type="text" id="email" name="email" maxlength="30">
 
                         <legend for="homeAddress">Address</legend>
-                        <input type="text" id="homeAddress" name="homeAddress">
+                        <input type="text" id="homeAddress" name="homeAddress" maxlength="100">
 
                         <legend for="city">City</legend>
-                        <input type="text" id="city" name="city">
+                        <input type="text" id="city" name="city" maxlength="100">
 
                         <legend for="postalCode">Postal Code</legend>
-                        <input type="text" id="postalCode" name="postalCode">
+                        <input type="text" id="postalCode" name="postalCode" maxlength="10">
 
                         <legend for="website">Website</legend>
-                        <input type="text" id="website" name="website">
+                        <input type="text" id="website" name="website" maxlength="50">
                         <br>
 
                         <button id="nextBtnPersonal">NEXT &rightarrow; </button>
@@ -95,7 +96,7 @@
                             <button >- Remove Experience </button>
                             <br> <br>
                             <legend for="position">Position</legend>
-                            <input type="text" id="position" name="position">
+                            <input type="text" id="position" name="position" maxlength="50">
                         
                             <legend for="employer">Employer</legend>
                             <input type="text" id="employer" name="employer">
@@ -286,7 +287,7 @@
 
                             <br> <br>
                             <button id="prevBtnCert">&leftarrow; BACK </button>
-                            <button id="completeBtn">COMPLETE &2713;</button>
+                            <button id="completeBtn">COMPLETE &checkmark;</button>
                         </form>
 
                         <br><br>

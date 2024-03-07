@@ -114,6 +114,10 @@ body{
   color: #FFFFFF;
 }
 
+.progress:active{
+  background-color: #002222;
+}
+
 /* RESULTS OR CV OUTCOME*/
 
 .resultsContainer{
