@@ -20,6 +20,7 @@
 /* Using the "*" symbol, we are referring to all elements */
 *{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12pt;
 }
 
 /*  We are removing the arrows from input field */
@@ -36,6 +37,10 @@ input[type=number] {
 text-align: left;
 }
 
+input{
+  height: fit-content;
+}
+
 body{
   background-color: #f7f7f7;
 }
@@ -46,48 +51,30 @@ body{
 }
 
 
-.input_container{
+.input_mainbox{
   background-color: #FFFFFF;
   padding: 20px;
+  display: flex; 
 }
 
 /* SECTION CONTAINERS (Personal, Professfional, Education) */
 
-.personalContainer{
-
-
-}
-
-.professionalContainer{
-
+/* THIS IS THE CONTAINER FOR EVERYTHING IN PERSONAL*/
+.input_container{
+  width: 50%;
 
 }
 
-
-.educationContainer{
-
-
-}
-
-
-.skillsContainer{
-
-
-}
-
-.languagesContainer{
-
+.preview{
+  padding: 20px;
+  width: 50%;
+  box-shadow: #c2c2c2 0px 0px 10px 2px;
+  border: #bfe0ff  1px solid;
+  border-radius: 5px;
+  background-color: #ffffff;
 
 
 }
-
-
-.certificateContainer{
-
-
-}
-
-
 
 /*PROGRESS CONTAINER */
 
@@ -126,7 +113,6 @@ body{
 }
 
 
-
 /* --- BASICS --- */
 
 h1{ 
@@ -146,11 +132,12 @@ h3, h4{
 
 select{
   padding: 10px;
-  width: 120px;
+  width: 150px;
   font-size: large;
-  background-color: #e8e7e7;
-  color: black;
+  background-color: #f3f3f3;
+  color: #004e97;
   border-radius: 5px;
+  border: #004e97  1px solid;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -159,7 +146,21 @@ input{
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 10px;
-  width: 250px;
+  max-width: 200px;
+  border: #0284ff  1px solid;
+  border-radius: 5px;
+}
+
+button{
+  background-color: #004e97;
+  color:#ffffff;
+  border: #0284ff  1px solid;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+::placeholder{
+  color: #000000;
 }
 
 legend{
@@ -168,11 +169,17 @@ legend{
 }
 
 textarea{
+  font-size: 14pt;
+  padding: 10px;
   margin-bottom: 20px;
-  width: 400px;
-  height: 100px;
-  text-wrap:stable ;
+  max-width: 600px;
+  min-width: 250px;
+  min-height: 100px;
+  max-height: 200px;
+  border-radius: 5px;
+  border: #0284ff  1px solid;
 }
+
 
 /* --- BUTTONS --- */
 .submitBtn{

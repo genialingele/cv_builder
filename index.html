@@ -21,64 +21,52 @@
         <h1>CV Builder</h1>
         <br>
         <p>Want a simple, professional CV? Simply enter your information below</p>
-        <p> <em>PLEASE NOTE: WE DO NOT STORE YOUR INFORMATION YET, HENCE YOU SHOULD DOWNLOAD THE CV ON YOUR DEVICE.</em></p>
-        <p> <em>ALL INFORMATION WILL BE LOST WHEN YOU CLOSE THIS WINDOW. </em></p>
 
         <!-- MAIN CONTAINER FOR INPUT AND RESULTS - START -->
         <div id="parent_container" class="parent_container">
+                            <!-- A SIMPLE DIV FOR THE PROGRESS BAR-->
+                
+                            <div id="progressContainer" class="progressContainer">
+                                <div id="personalProgress" class="progress"><p>PROFILE</p></div>
+                                 <div id="professionalProgress" class="progress"><p>EXPERIENCE</p></div>
+                                 <div id="educationProgress" class="progress"><p>EDUCATION</p></div>
+                                 <div id="skillsProgress" class="progress"><p>SKILLS</p></div>
+                                 <div id="langProgress" class="progress"><p>LANGUAGES</p></div>
+                                 <div id="certProgress" class="progress"><p>CERTIFICATES</p></div>
+                                 <div id="completeProgress" class="progress"><p>COMPLETE</p></div>
+                             </div>
             
         <!-- INPUT CONTAINER - START -->
-            <div id="input_container" class="input_container">
-
-                <!-- A SIMPLE DIV FOR THE PROGRESS BAR-->
-
-                
-                <div id="progressContainer" class="progressContainer">
-                   <div id="personalProgress" class="progress"><p>PROFILE</p></div>
-                    <div id="professionalProgress" class="progress"><p>EXPERIENCE</p></div>
-                    <div id="educationProgress" class="progress"><p>EDUCATION</p></div>
-                    <div id="skillsProgress" class="progress"><p>SKILLS</p></div>
-                    <div id="langProgress" class="progress"><p>LANGUAGES</p></div>
-                    <div id="certProgress" class="progress"><p>CERTIFICATES</p></div>
-                    <div id="completeProgress" class="progress"><p>COMPLETE</p></div>
-                </div>
-                
-                
+            <div id="input_container" class="input_mainbox">
 
                 <!-- PERSONAL DETAILS - START -->
-                <div id="personalContainer" class="personalContainer">
+                <div id="personalContainer" class="input_container">
                 <h2>Personal details</h2>
 
-                    <form id="personalDetailsForm" >
-                        <legend for="firstName" >First Name</legend>
-                        <input type="text" id="firstName" name="firstName" maxlength="25">
-                    
-                        <legend for="lastName">Family Name</legend>
-                        <input type="text" id="lastName" name="lastName" maxlength="25">
+                    <form id="personalDetailsForm" class="personalDetailsForm" >
+                        
+                        <input type="text" id="firstName" name="firstName" maxlength="25" placeholder="Name(s)">
+                        <input type="text" id="lastName" name="lastName" maxlength="25" placeholder="Surname">
+                        <br>
+                        <input type="text" id="jobTitle" name="jobTitle" maxlength="50" placeholder="Job Title">
+                        <br>  
+                        <textarea  id="intro" name="intro" maxlength="300" placeholder="Brief Intro (300 characters only)" class="longText"></textarea>    
+                        <br>
 
-                        <legend for="profession">Profession</legend>
-                        <input type="text" id="profession" name="profession" maxlength="50">
+                        <input type="number" id="phone" name="phone" maxlength="13" placeholder="Phone">
+                        <input type="email" id="email" name="email" maxlength="30" placeholder="E-mail">
+                        <input type="text" id="website" name="website" maxlength="50" placeholder="Website">
+                        <br>
 
-                        <legend for="intro">Brief Introduction</legend>
-                        <textarea id="intro" name="intro" maxlength="300"></textarea>
+                        <textarea id="homeAddress" name="homeAddress" maxlength="200" placeholder="Home Address"></textarea>
+                        <br>
+                        <input type="text" id="city" name="city" maxlength="100" placeholder="City">
 
-                        <legend for="phone">Phone Number</legend>
-                        <input type="text" id="phone" name="phone" maxlength="13">
+                        <input type="text" id="city" name="city" maxlength="100" placeholder="Country">
+                        <br>
 
-                        <legend for="email">E-mail Address</legend>
-                        <input type="text" id="email" name="email" maxlength="30">
-
-                        <legend for="homeAddress">Address</legend>
-                        <input type="text" id="homeAddress" name="homeAddress" maxlength="100">
-
-                        <legend for="city">City</legend>
-                        <input type="text" id="city" name="city" maxlength="100">
-
-                        <legend for="postalCode">Postal Code</legend>
-                        <input type="text" id="postalCode" name="postalCode" maxlength="10">
-
-                        <legend for="website">Website</legend>
-                        <input type="text" id="website" name="website" maxlength="50">
+                        <input type="text" id="postalCode" name="postalCode" maxlength="10" placeholder="Postal Code">
+                        
                         <br>
 
                         <button id="nextBtnPersonal">NEXT &rightarrow; </button>
@@ -89,30 +77,32 @@
                 
 
                 <!-- WORK EXPERIENCE - START -->
-                <div id="professionalContainer" class="professionalContainer">
+                <div id="professionalContainer" class="input_container">
                     <h2>Professional Experience</h2>
     
                         <form id="professionalExperienceForm">
                             <button >- Remove Experience </button>
                             <br> <br>
-                            <legend for="position">Position</legend>
-                            <input type="text" id="position" name="position" maxlength="50">
-                        
-                            <legend for="employer">Employer</legend>
-                            <input type="text" id="employer" name="employer">
-    
-                            <legend for="workCity">City</legend>
-                            <input type="text" id="workCity" name="workCity">
-    
-                            <legend for="startDate">Start Date</legend>
-                            <input type="date" id="startDate" name="startDate">
 
-                            <legend for="endDate">End Date</legend>
-                            <input type="date" id="endDate" name="endDate">
-                            <input type="radio" id="workHere">I work heres
-    
-                            <legend for="duties">Duties</legend>
-                            <textarea type="text" id="duties" name="duties"></textarea><br>
+                            <input type="text" id="jobTitle" name="jobTitle" maxlength="50" placeholder="Job Title">
+                        
+                            <input type="text" id="employer" name="employer" maxlength="50" placeholder="Employer">
+
+                            <input type="text" id="workCity" name="workCity" maxlength="50" placeholder="City">
+
+                            <legend for="startDate" >Start Date</legend>
+                            <input type="date" id="startDate" name="startDate" placeholder="Start Date">
+
+                            <legend for="endDate" >End Date</legend>
+                            <input type="date" id="endDate" name="endDate" placeholder="Start Date">
+
+                            <input type="radio" id="workHere"> Still working here
+
+                            <br>
+
+                            <textarea id="duties" name="duties" maxlength="200" placeholder="Your tasks (e.g. resolved equations)"></textarea>
+                            
+                            <br>
                             
                             <button >+ Add Experience </button>
 
@@ -127,30 +117,28 @@
 
 
                 <!-- EDUCATION - START -->
-                <div id="educationContainer" class="educationContainer">
+                <div id="educationContainer" class="input_container">
                     <h2>Education</h2>
     
                         <form id="educationForm" name="educationForm">
                             <button >- Remove Education </button>
-                            <br> <br>
-                            <legend for="position">School Name</legend>
-                            <input type="text" id="position" name="firstName">
-                        
-                            <legend for="employer">Field Studied</legend>
-                            <input type="text" id="employer" name="employer">
-    
-                            <legend for="degreeLevel">Degree Level</legend>
-                            <input type="text" id="degreeLevel" name="degreeLevel">
-
-                            <legend for="eduCity">City</legend>
-                            <input type="text" id="eduCity" name="eduCity">
-    
-                            <legend for="eduStartDate">Start Date</legend>
-                            <input type="date" id="eduStartDate" name="eduStartDate">
-    
-    
-                            <legend for="eduEndDate">Graduation Date (or expected)</legend>
-                            <input type="date" id="eduEndDate" name="eduEndDate"><br>
+                            <br><br>
+                            <input type="text" id="schoolName" name="schoolName" placeholder="School Name">
+                            <br>
+                            <input type="text" id="fieldStudied" name="fieldStudied" placeholder="Field Studied">
+                            <select id="degreeLevel" name="degreeLevel">
+                                <option value="1">Certificate</option>
+                                <option value="2">Diploma</option>
+                                <option value="3">Bachelors degree</option>
+                                <option value="4">Postgraduate diploma</option>
+                                <option value="5">Professional certificate</option>
+                                <option value="6">Honours degree</option>
+                                <option value="7">Masters degree</option>
+                                <option value="8">Doctoral degree</option>
+                            </select>
+                            <br>
+                            <input type="date" id="eduStartDate" name="eduStartDate" placeholder="Start Date">
+                            <input type="date" id="eduEndDate" name="eduEndDate" placeholder="End Date (Graduation)"><br>
                             
                             <button >+ Add Education </button>
                             <br> <br>
@@ -164,44 +152,20 @@
                     
                     
                 <!-- SKILLS - START -->
-                <div id="skillsContainer" class="skillsContainer">
+                <div id="skillsContainer" class="input_container">
                     <h2>Skills</h2>
     
                         <form name="skillsForm">
-                            
-                            <legend for="skill1">Skill 1</legend>
-                            <input type="text" id="skill1" name="skill1">
+                            <button >- Remove Skill </button>
+                            <br>
+                            <input type="text" id="skill1" name="skill1" placeholder="Skill description" maxlength="25">
                             <select id="skill1Level" name="skill1Level">
-                                <option value="1">Beginner</option>
-                                <option value="5">Good</option>
-                                <option value="10">Pro</option>
-                                <option value="15">Expert</option>
-
+                                <option value="5">Beginner</option>
+                                <option value="10">Good</option>
+                                <option value="15">Pro</option>
+                                <option value="20">Expert</option>
                             </select>
                             <br>
-                            
-                            <legend for="skill1">Skill 2</legend>
-                            <input type="text" id="skill1" name="skill1">
-                            <select id="skill1Level" name="skill1Level">
-                                <option value="1">Beginner</option>
-                                <option value="5">Good</option>
-                                <option value="10">Pro</option>
-                                <option value="15">Expert</option>
-
-                            </select>
-                            <br>
-                            
-                            <legend for="skill1">Skill 3</legend>
-                            <input type="text" id="skill1" name="skill1">
-                            <select id="skill1Level" name="skill1Level">
-                                <option value="1">Beginner</option>
-                                <option value="5">Good</option>
-                                <option value="10">Pro</option>
-                                <option value="15">Expert</option>
-
-                            </select>
-                            <br>
-
                             <button >+ Add Skill </button>
                             <br> <br>
 
@@ -214,7 +178,7 @@
 
 
                 <!-- LANGUAGES - START -->
-                <div id="languagesContainer" class="languagesContainer">
+                <div id="languagesContainer" class="input_container">
                     <h2>Languages</h2>
     
                         <form name="languagesForm">
@@ -265,7 +229,7 @@
                     
                 <!-- CERTIFICATE - START -->
                 <!-- OPTIONAL SO, IF STATEMENT SHOULD BE USED-->
-                <div id="certificateContainer" class="certificateContainer">
+                <div id="certificateContainer" class="input_container">
                     <h2>Certificates</h2>
     
                         <form name="certificateForm">
@@ -292,7 +256,13 @@
 
                         <br><br>
                     </div>
-                    <!-- CERTIFICATE  - END -->     
+                    <!-- CERTIFICATE  - END -->   
+                     
+                <!-- PREVIEW -->
+                <div id="personalContainer" class="preview">
+                    <h2>Your Name</h2>
+                    <hr>
+                </div>
                   
 
 
