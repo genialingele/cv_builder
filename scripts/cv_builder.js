@@ -158,6 +158,17 @@ const completeBtnPID = completeBtn.parentElement.parentElement.id;
 const resultsContainerPID = resultsContainer.parentElement.parentElement.id;
 
 
+function realTimeTyping() {
+    //For the personal details
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const fullName = document.getElementById('fullName');
+
+    fullName.textContent = `${firstName} ${lastName}`;
+
+    //For the eduction details
+}
+
 //PROGRESS BAR
 //We want the color of the section tab to change when the user progresses
 personalProgress.addEventListener("click", 

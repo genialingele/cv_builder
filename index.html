@@ -45,27 +45,27 @@
 
                     <form id="personalDetailsForm" class="personalDetailsForm" >
                         
-                        <input type="text" id="firstName" name="firstName" maxlength="25" placeholder="Name(s)">
-                        <input type="text" id="lastName" name="lastName" maxlength="25" placeholder="Surname">
+                        <input type="text" id="firstName" name="firstName" maxlength="25" oninput="realTimeTyping()"  placeholder="Name(s)">
+                        <input type="text" id="lastName" name="lastName" maxlength="25" oninput="realTimeTyping()"  placeholder="Surname">
                         <br>
-                        <input type="text" id="jobTitle" name="jobTitle" maxlength="50" placeholder="Job Title">
+                        <input type="text" id="jobTitle" name="jobTitle" maxlength="50" oninput="realTimeTyping()"  placeholder="Job Title">
                         <br>  
-                        <textarea  id="intro" name="intro" maxlength="300" placeholder="Brief Intro (300 characters only)" class="longText"></textarea>    
+                        <textarea  id="intro" name="intro" maxlength="300" oninput="realTimeTyping()"  placeholder="Brief Intro (300 characters only)" class="longText"></textarea>    
                         <br>
 
-                        <input type="number" id="phone" name="phone" maxlength="13" placeholder="Phone">
-                        <input type="email" id="email" name="email" maxlength="30" placeholder="E-mail">
-                        <input type="text" id="website" name="website" maxlength="50" placeholder="Website">
+                        <input type="number" id="phone" name="phone" maxlength="13" oninput="realTimeTyping()"  placeholder="Phone" >
+                        <input type="email" id="email" name="email" maxlength="30" oninput="realTimeTyping()"  placeholder="E-mail">
+                        <input type="text" id="website" name="website" maxlength="50" oninput="realTimeTyping()"  placeholder="Website">
                         <br>
 
-                        <textarea id="homeAddress" name="homeAddress" maxlength="200" placeholder="Home Address"></textarea>
+                        <textarea id="homeAddress" name="homeAddress" maxlength="200" oninput="realTimeTyping()"  placeholder="Home Address" ></textarea>
                         <br>
-                        <input type="text" id="city" name="city" maxlength="100" placeholder="City">
+                        <input type="text" id="city" name="city" maxlength="100" oninput="realTimeTyping()"  placeholder="City" >
 
-                        <input type="text" id="city" name="city" maxlength="100" placeholder="Country">
+                        <input type="text" id="city" name="city" maxlength="100" oninput="realTimeTyping()"  placeholder="Country">
                         <br>
 
-                        <input type="text" id="postalCode" name="postalCode" maxlength="10" placeholder="Postal Code">
+                        <input type="text" id="postalCode" name="postalCode" maxlength="10" oninput="realTimeTyping()"  placeholder="Postal Code" >
                         
                         <br>
 
@@ -84,23 +84,23 @@
                             <button >- Remove Experience </button>
                             <br> <br>
 
-                            <input type="text" id="jobTitle" name="jobTitle" maxlength="50" placeholder="Job Title">
+                            <input type="text" id="jobTitle" name="jobTitle" maxlength="50" oninput="realTimeTyping()"  placeholder="Job Title">
                         
-                            <input type="text" id="employer" name="employer" maxlength="50" placeholder="Employer">
+                            <input type="text" id="employer" name="employer" maxlength="50" oninput="realTimeTyping()"  placeholder="Employer">
 
-                            <input type="text" id="workCity" name="workCity" maxlength="50" placeholder="City">
+                            <input type="text" id="workCity" name="workCity" maxlength="50" oninput="realTimeTyping()"  placeholder="City">
 
                             <legend for="startDate" >Start Date</legend>
-                            <input type="date" id="startDate" name="startDate" placeholder="Start Date">
+                            <input type="date" id="startDate" name="startDate" oninput="realTimeTyping()"  placeholder="Start Date">
 
                             <legend for="endDate" >End Date</legend>
-                            <input type="date" id="endDate" name="endDate" placeholder="Start Date">
+                            <input type="date" id="endDate" name="endDate" oninput="realTimeTyping()"  placeholder="Start Date">
 
                             <input type="radio" id="workHere"> Still working here
 
                             <br>
 
-                            <textarea id="duties" name="duties" maxlength="200" placeholder="Your tasks (e.g. resolved equations)"></textarea>
+                            <textarea id="duties" name="duties" maxlength="200" oninput="realTimeTyping()"  placeholder="Your tasks (e.g. resolved equations)"></textarea>
                             
                             <br>
                             
@@ -123,9 +123,9 @@
                         <form id="educationForm" name="educationForm">
                             <button >- Remove Education </button>
                             <br><br>
-                            <input type="text" id="schoolName" name="schoolName" placeholder="School Name">
+                            <input type="text" id="schoolName" name="schoolName" oninput="realTimeTyping()"  placeholder="School Name">
                             <br>
-                            <input type="text" id="fieldStudied" name="fieldStudied" placeholder="Field Studied">
+                            <input type="text" id="fieldStudied" name="fieldStudied" oninput="realTimeTyping()"  placeholder="Field Studied">
                             <select id="degreeLevel" name="degreeLevel">
                                 <option value="1">Certificate</option>
                                 <option value="2">Diploma</option>
@@ -137,8 +137,8 @@
                                 <option value="8">Doctoral degree</option>
                             </select>
                             <br>
-                            <input type="date" id="eduStartDate" name="eduStartDate" placeholder="Start Date">
-                            <input type="date" id="eduEndDate" name="eduEndDate" placeholder="End Date (Graduation)"><br>
+                            <input type="date" id="eduStartDate" name="eduStartDate" oninput="realTimeTyping()"  placeholder="Start Date">
+                            <input type="date" id="eduEndDate" name="eduEndDate" oninput="realTimeTyping()"  placeholder="End Date (Graduation)"><br>
                             
                             <button >+ Add Education </button>
                             <br> <br>
@@ -158,7 +158,7 @@
                         <form name="skillsForm">
                             <button >- Remove Skill </button>
                             <br>
-                            <input type="text" id="skill1" name="skill1" placeholder="Skill description" maxlength="25">
+                            <input type="text" id="skill1" name="skill1" oninput="realTimeTyping()"  placeholder="Skill description" maxlength="25">
                             <select id="skill1Level" name="skill1Level">
                                 <option value="5">Beginner</option>
                                 <option value="10">Good</option>
@@ -260,7 +260,7 @@
                      
                 <!-- PREVIEW -->
                 <div id="personalContainer" class="preview">
-                    <h2>Your Name</h2>
+                    <h2 id="fullName">Your Name</h2>
                     <hr>
                 </div>
                   
