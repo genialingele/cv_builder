@@ -10,17 +10,18 @@
         <title>Your CV Builder</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <!-- START HERE -->
-        <h1>CV Builder</h1>
-        <br>
-        <p>Want a simple, professional CV? Simply enter your information below</p>
+        <!-- MAIN HEADER -->
+        <div class="main_nav">
+            <h1>CV Builder by Genial</h1>
+            <h2 style="text-align: center;">Welcome. Let's build your CV today!</h2>
+        </div>
 
         <!-- MAIN CONTAINER FOR INPUT AND RESULTS - START -->
         <div id="parent_container" class="parent_container">
@@ -259,11 +260,142 @@
                     <!-- CERTIFICATE  - END -->   
                      
                 <!-- PREVIEW -->
-                <div id="personalContainer" class="preview">
-                    <h2 id="fullName">Your Name</h2>
+                <div id="preview" class="preview">
+                    
+                    <div class="two_column_text">
+                        <!--COLUMN 1-->
+                        <div class="info_column">
+                        <h2 id="fullName">Your Name</h2>
+                        <h3><span id="disTitle"></span>Title</p>
+                        </div>
+                       
+                        <!--COLUMN 2-->
+                        <div class="info_column">
+                        <p>Phone : <span id="disPhone"></span> </p>
+                        <p>E-mail :  <span id="disEmail"></span> </p>
+                        <p id="disAddress">Address : </span> </p>
+                        </div>
+
+                    </div>
+
+                    <!--BRIEF INTRO-->
+                    <div>
+                        <p>
+                            Here you will write a brief summary about your self such as the title you are applying for, a short list of your top 3 skills, a motivation to convince the hiring team why you will be an asset to their company and what you will bring to their company.
+                        </p>
+                    </div>
+
+                    <div id="disExperienceFullContainer">
+                        <div>
+                            <h3>Professional Experience</h3>
+                        </div>
+
+                        <!--Experience Divs-->
+                        <!--An experience <div> has 3 parts;a year, the position details, and city-->
+                        <div class="three_columns" id="disExperience">
+
+                            <!--Exp Year Div-->
+                            <div>
+                                <p id="expYear">May 2024 - January 2025</p>
+                            </div>                      
+                                                
+                            <!--Exp Role Div-->
+                            <div>
+                                <p id="expRole">Position at Company Name</p>   
+                                <p id="expDescription"> Describe the specific tasks you were performing while you were in this postion. Try to keep it concise and brief. </p>  
+                                
+                            </div>
+
+                            <!--Exp City Div-->
+                            <div>
+                                <p id="expCity">City</span> </p>
+                            </div>                            
+
+
+                        </div>
+
+                    <!--CLOSING DIV FOR EXP CARD-->  
+                    </div>
+
                     <hr>
+
+                    <!--EDUCATION SECTION START-->
+
+                    <div id="disEducationFullContainer">
+                        <div>
+                            <h3>Education</h3>
+                        </div>
+
+                        <!--Experience Divs-->
+                        <!--An experience <div> has 3 parts;a year, the position details, and city-->
+                        <div class="three_columns" id="disEducation">
+
+                            <!--Exp Year Div-->
+                            <div>
+                                <p id="eduYear">2024 - 2025</p>
+                            </div>                      
+                                                
+                            <!--Exp Role Div-->
+                            <div>
+                                <p id="eduSchool">Name of University or Institution </p>   
+                                <p id="eduDescription"> Level in Major or Specialisation Official Name </p>  
+                                
+                            </div>
+
+                            <!--Exp City Div-->
+                            <div>
+                                <p id="expCity">City</span> </p>
+                            </div>                            
+
+
+                        </div>
+
+                    <!--CLOSING DIV FOR EDUCATION CARD-->  
+                    </div>
+
+                    <hr>
+
+                    <!--SKILLS SECTION STARTS-->
+                    <div id="disSkillsFullContainer">
+                        <h3>Core Skills</h3>
+                        <p>Skill Name : Profeciency, Skill Name : Profeciency, Skill Name : Profeciency, Skill Name : Profeciency.</p>
+
+                    <!--CLOSING SKILLS SECTION-->
+                    </div>
+
+                    <hr>
+
+                    <!--LANGUAGES SECTION STARTS-->
+                    <div id="disLanguagesFullContainer">
+                        <h3>Languages</h3>
+                        <p>Language Name : Profeciency. <br>
+                            Language Name : Profeciency. <br>
+                            Language Name : Profeciency. <br>
+                        </p>
+
+                    <!--CLOSING LANGUAGES SECTION-->
+                    </div>
+
+
+                    <!--CERTIFICATES SECTION STARTS-->
+                    <div id="disLanguagesFullContainer">
+                        <h3>Certificates / Awards</h3>
+                        <p>Certificate Name. <br>
+                            Certificate Name. <br>
+                            Certificate Name. <br>
+                        </p>
+
+                    <!--CLOSING CERTIFICATES SECTION-->
+                    </div>                   
+
+                    
+
+
+
+
+                <!-- PREVIEW END -->  
                 </div>
-                  
+                <!-- PREVIEW END -->  
 
 
 
@@ -291,6 +423,6 @@
         
 
 
-        <script src="/scripts/cv_builder.js" async defer></script>
+        <script src="scripts/cv_builder.js" async defer></script>
     </body>
 </html>

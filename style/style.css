@@ -43,6 +43,14 @@ input{
 
 body{
   background-color: #f7f7f7;
+  margin: 0;
+}
+
+.main_nav{
+  background-color: #004e97;
+  color: #ffffff;
+  margin: 0px;
+  padding: 1px;
 }
 
 .parent_container{
@@ -55,63 +63,87 @@ body{
   background-color: #FFFFFF;
   padding: 20px;
   display: flex; 
+  justify-content: space-around;
 }
 
+
+.two_column_text{
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.three_column_text{
+
+}
+
+.three_columns{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top:10px;
+
+}
+
+.three_columns :nth-child(2){
+  flex-grow:2;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.info_column{
+  
+}
 /* SECTION CONTAINERS (Personal, Professfional, Education) */
 
-/* THIS IS THE CONTAINER FOR EVERYTHING IN PERSONAL*/
 .input_container{
-  width: 50%;
-
+  width:100%;
+  margin-right: 20px;
 }
 
 .preview{
   padding: 20px;
-  width: 50%;
   box-shadow: #c2c2c2 0px 0px 10px 2px;
-  border: #bfe0ff  1px solid;
+  border: #dadada  2px solid;
   border-radius: 5px;
   background-color: #ffffff;
-
-
 }
 
 /*PROGRESS CONTAINER */
 
 .progressContainer{
-  background-color: hsla(0, 0%, 88%, 0.819);
+  background-color: #838383;
   display: flex;
-  width: 100%;
-  margin: 2px;
   position: sticky;
-  top: 0;
+  color:#ffffff;
 }
-
 
 .progress{
   margin: 0px;
   flex:1;
-  color:black;
+  color:rgb(255, 255, 255);
   font-weight: bold;
   text-align: center;
+  top:0;
 }
 
 .progress:hover{
-  background-color: black;
+  background-color: #0073df;
   color: #FFFFFF;
 }
 
 .progress:active{
-  background-color: #002222;
+  background-color: #06bdeb;
 }
 
 /* RESULTS OR CV OUTCOME*/
 
 .resultsContainer{
-    background-color: rgba(0,10,100, 0.7);
+    background-color: #000a64b3;
  
 }
-
 
 /* --- BASICS --- */
 
@@ -124,11 +156,16 @@ h1{
 h2{
   line-height: 18pt;
   font-size: 18pt;
+  
 }
 
 h3, h4{
   line-height: 18pt;
   font-size: 14pt;
+}
+
+p{
+  font-size: 12pt;
 }
 
 select{
@@ -158,6 +195,10 @@ button{
   border: #0284ff  1px solid;
   padding: 10px;
   border-radius: 5px;
+}
+
+button:hover{
+  background-color: #5d98cc;
 }
 
 ::placeholder{
