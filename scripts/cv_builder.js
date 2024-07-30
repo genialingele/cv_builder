@@ -29,7 +29,6 @@ const resultsContainer = document.getElementById("resultsContainer");
 const progressContainer = document.getElementById("progressContainer");
 
 
-
 // LISTEN TO BUTTONS
 
 /*Now, each button will have a unique ID 
@@ -54,8 +53,6 @@ const prevBtnCert = document.getElementById("prevBtnCert");
 const completeBtn = document.getElementById("completeBtn");
 
 
-
-
 //NOW LISTEN TO THE "LINKS" TO THE SECTIONS
 const personalProgress = document.getElementById("personalProgress");
 const professionalProgress = document.getElementById("professionalProgress");
@@ -63,8 +60,6 @@ const educationProgress = document.getElementById("educationProgress");
 const skillsProgress = document.getElementById("skillsProgress");
 const langProgress = document.getElementById("langProgress");
 const certProgress = document.getElementById("certProgress");
-
-
 
 //INITIALLY, WE WANT ALL OTHER SECTIONS TO BE HIDDEN
 function hideOtherThanPersonal (){
@@ -158,13 +153,63 @@ const completeBtnPID = completeBtn.parentElement.parentElement.id;
 const resultsContainerPID = resultsContainer.parentElement.parentElement.id;
 
 
+//ALL ABOUT THE PREVIEW CONTAINER
+const disExperienceFullContainer = document.getElementById('disExperienceFullContainer');
+
 function realTimeTyping() {
     //For the personal details
+
+    //the id "fullName" is concatenation of the first and last name inputs
+    //For other details, the 2 lines above gets the value the one below prints
+
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
     const fullName = document.getElementById('fullName');
+    fullName.textContent = firstName + " " + lastName;
 
-    fullName.textContent = `${firstName} ${lastName}`;
+    const jobTitle = document.getElementById('jobTitle').value;
+    const disTitle = document.getElementById('disTitle').textContent = jobTitle;
+
+    const intro = document.getElementById('intro').value;
+    const disIntro = document.getElementById('disIntro').textContent = intro;
+
+    const phone = document.getElementById('phone').value;
+    const disPhone = document.getElementById('disPhone').textContent = phone;
+
+    const email = document.getElementById('email').value;
+    const disEmail = document.getElementById('disEmail').textContent= email;
+
+
+    const website = document.getElementById('website').value;
+    const disWebsite = document.getElementById('disWebsite').textContent= website;
+
+
+    const homeAddress = document.getElementById('homeAddress').value;
+    const city = document.getElementById('city').value;
+    const country = document.getElementById('country').value;
+    const postalCode = document.getElementById('postalCode').value;
+
+    const disAddress = document.getElementById('disAddress').textContent = `${homeAddress}  ${city}, ${country} ${postalCode}`;
+
+    //For the experience details
+    const employer = document.getElementById('employer').value;
+    const position = document.getElementById('position').value;
+    const disRole = document.getElementById('disRole').innerHTML= `<b>${position}</b> at ${employer} `;
+
+
+    const workStartDate = document.getElementById('workStartDate').value;
+    const workHere = document.getElementById('workHere');
+
+    //if it is on then they didn't select "still working here"
+   
+
+    const workEndDate = document.getElementById('workEndDate').value;
+
+    const formattedDate = document.getElementById('disWorkYear').innerHTML= `${workStartDate.substring(0,7)} - ${workEndDate} `;
+
+    const duties = document.getElementById('duties').value;
+    const disDuties = document.getElementById('disRole').innerHTML= `<b>${position}</b> at ${employer} `;
+
 
     //For the eduction details
 }
@@ -239,7 +284,6 @@ nextBtnProfessional.addEventListener("click",
     }
 
 )
-
 
 //BUTTONS ON THE EDUCATION SECTION BRING YOU EITHER TO SKILLS OR PROFESSIONAL
 prevBtnEducation.addEventListener("click", 

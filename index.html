@@ -20,7 +20,6 @@
         <!-- MAIN HEADER -->
         <div class="main_nav">
             <h1>CV Builder by Genial</h1>
-            <h2 style="text-align: center;">Welcome. Let's build your CV today!</h2>
         </div>
 
         <!-- MAIN CONTAINER FOR INPUT AND RESULTS - START -->
@@ -46,26 +45,25 @@
 
                     <form id="personalDetailsForm" class="personalDetailsForm" >
                         
-                        <input type="text" id="firstName" name="firstName" maxlength="25" oninput="realTimeTyping()"  placeholder="Name(s)">
-                        <input type="text" id="lastName" name="lastName" maxlength="25" oninput="realTimeTyping()"  placeholder="Surname">
+                        <input type="text" id="firstName" name="firstName" maxlength="25" oninput="realTimeTyping()"  placeholder="Name(s)" required>
+                        <input type="text" id="lastName" name="lastName" maxlength="25" oninput="realTimeTyping()"  placeholder="Surname" required>
                         <br>
                         <input type="text" id="jobTitle" name="jobTitle" maxlength="50" oninput="realTimeTyping()"  placeholder="Job Title">
                         <br>  
                         <textarea  id="intro" name="intro" maxlength="300" oninput="realTimeTyping()"  placeholder="Brief Intro (300 characters only)" class="longText"></textarea>    
                         <br>
 
-                        <input type="number" id="phone" name="phone" maxlength="13" oninput="realTimeTyping()"  placeholder="Phone" >
+                        <input type="number" id="phone" name="phone" maxlength="15" oninput="realTimeTyping()"  placeholder="Phone" required title="Numbers only, no space between." min=0>
                         <input type="email" id="email" name="email" maxlength="30" oninput="realTimeTyping()"  placeholder="E-mail">
-                        <input type="text" id="website" name="website" maxlength="50" oninput="realTimeTyping()"  placeholder="Website">
+                        <input type="text" id="website" name="website" maxlength="50" oninput="realTimeTyping()"  placeholder="Website (optional)" title="Use this format: www.example.com">
                         <br>
 
-                        <textarea id="homeAddress" name="homeAddress" maxlength="200" oninput="realTimeTyping()"  placeholder="Home Address" ></textarea>
-                        <br>
-                        <input type="text" id="city" name="city" maxlength="100" oninput="realTimeTyping()"  placeholder="City" >
+                        <input id="homeAddress" name="homeAddress" maxlength="100" oninput="realTimeTyping()"  placeholder="Street No. & Name" >
+                        
+                        <input type="text" id="city" name="city" maxlength="100" oninput="realTimeTyping()"  placeholder="City" required title="City is required" >
 
-                        <input type="text" id="city" name="city" maxlength="100" oninput="realTimeTyping()"  placeholder="Country">
-                        <br>
-
+                        <input type="text" id="country" name="country" maxlength="100" oninput="realTimeTyping()"  placeholder="Country">
+                      
                         <input type="text" id="postalCode" name="postalCode" maxlength="10" oninput="realTimeTyping()"  placeholder="Postal Code" >
                         
                         <br>
@@ -85,17 +83,17 @@
                             <button >- Remove Experience </button>
                             <br> <br>
 
-                            <input type="text" id="jobTitle" name="jobTitle" maxlength="50" oninput="realTimeTyping()"  placeholder="Job Title">
+                            <input type="text" id="position" name="position" maxlength="50" oninput="realTimeTyping()"  placeholder="Job Title">
                         
-                            <input type="text" id="employer" name="employer" maxlength="50" oninput="realTimeTyping()"  placeholder="Employer">
+                            <input type="text" id="employer" name="employer" maxlength="50" oninput="realTimeTyping()"  placeholder="Company Name">
 
                             <input type="text" id="workCity" name="workCity" maxlength="50" oninput="realTimeTyping()"  placeholder="City">
 
-                            <legend for="startDate" >Start Date</legend>
-                            <input type="date" id="startDate" name="startDate" oninput="realTimeTyping()"  placeholder="Start Date">
+                            <legend for="workStartDate" >Start Date</legend>
+                            <input type="date" id="workStartDate" name="workStartDate" oninput="realTimeTyping()"  placeholder="Start Date">
 
-                            <legend for="endDate" >End Date</legend>
-                            <input type="date" id="endDate" name="endDate" oninput="realTimeTyping()"  placeholder="Start Date">
+                            <legend for="workEndDate" >End Date</legend>
+                            <input type="date" id="workEndDate" name="workEndDate" oninput="realTimeTyping()"  placeholder="Start Date">
 
                             <input type="radio" id="workHere"> Still working here
 
@@ -105,7 +103,7 @@
                             
                             <br>
                             
-                            <button >+ Add Experience </button>
+                            <button>+ Add Experience </button>
 
                             <br><br>
 
@@ -266,21 +264,22 @@
                         <!--COLUMN 1-->
                         <div class="info_column">
                         <h2 id="fullName">Your Name</h2>
-                        <h3><span id="disTitle"></span>Title</p>
+                        <h3 id="disTitle">Title</h3>
                         </div>
                        
                         <!--COLUMN 2-->
                         <div class="info_column">
-                        <p>Phone : <span id="disPhone"></span> </p>
-                        <p>E-mail :  <span id="disEmail"></span> </p>
-                        <p id="disAddress">Address : </span> </p>
+                        <p id="disPhone">Phone : <span ></span> </p>
+                        <p id="disEmail">E-mail : </p>
+                        <p id="disAddress"> Address :  </p>
+                        <p id="disWebsite"></p>
                         </div>
 
                     </div>
 
                     <!--BRIEF INTRO-->
                     <div>
-                        <p>
+                        <p id="disIntro">
                             Here you will write a brief summary about your self such as the title you are applying for, a short list of your top 3 skills, a motivation to convince the hiring team why you will be an asset to their company and what you will bring to their company.
                         </p>
                     </div>
@@ -296,19 +295,19 @@
 
                             <!--Exp Year Div-->
                             <div>
-                                <p id="expYear">May 2024 - January 2025</p>
+                                <p id="disWorkYear">May 2024 - January 2025</p>
                             </div>                      
                                                 
                             <!--Exp Role Div-->
                             <div>
-                                <p id="expRole">Position at Company Name</p>   
-                                <p id="expDescription"> Describe the specific tasks you were performing while you were in this postion. Try to keep it concise and brief. </p>  
+                                <p id="disRole">Position at Company Name</p>   
+                                <p id="disDuties"> Describe the specific tasks you were performing while you were in this postion. Try to keep it concise and brief. </p>  
                                 
                             </div>
 
                             <!--Exp City Div-->
                             <div>
-                                <p id="expCity">City</span> </p>
+                                <p id="disWorkCity">City</span> </p>
                             </div>                            
 
 
@@ -376,7 +375,6 @@
                     <!--CLOSING LANGUAGES SECTION-->
                     </div>
 
-
                     <!--CERTIFICATES SECTION STARTS-->
                     <div id="disLanguagesFullContainer">
                         <h3>Certificates / Awards</h3>
@@ -387,9 +385,6 @@
 
                     <!--CLOSING CERTIFICATES SECTION-->
                     </div>                   
-
-                    
-
 
 
 
