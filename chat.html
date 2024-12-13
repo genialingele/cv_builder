@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Dynamic Work Experience Form -->
+<div id="experience-container">
+    <button id="add-experience" type="button">Add Experience</button>
+  </div>
+  
+  <script>
+    const container = document.getElementById('experience-container');
+    const addButton = document.getElementById('add-experience');
+  
+    addButton.addEventListener('click', () => {
+      const experienceForm = document.createElement('div');
+      experienceForm.className = 'experience-form';
+  
+      experienceForm.innerHTML = `
+        <div>
+          <label for="job-title">Job Title:</label>
+          <input type="text" id="job-title" name="job-title">
+        </div>
+        <div>
+          <label for="company">Company:</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div>
+          <label for="duration">Duration:</label>
+          <input type="text" id="duration" name="duration">
+        </div>
+        <button type="button" class="save-experience">Save</button>
+      `;
+  
+      container.appendChild(experienceForm);
+  
+      experienceForm.querySelector('.save-experience').addEventListener('click', () => {
+        const jobTitle = experienceForm.querySelector('#job-title').value;
+        const company = experienceForm.querySelector('#company').value;
+  
+        const summary = document.createElement('div');
+        summary.className = 'experience-summary';
+        summary.textContent = `${jobTitle} at ${company}`;
+  
+        summary.addEventListener('click', () => {
+          experienceForm.style.display = 'block';
+          summary.remove();
+        });
+  
+        experienceForm.replaceWith(summary);
+      });
+    });
+  </script>
+  
+  <style>
+    .experience-form {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  
+    .experience-summary {
+      cursor: pointer;
+      background-color: #f9f9f9;
+      padding: 5px;
+      margin-top: 10px;
+    }
+  </style>
+  
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+

@@ -4,420 +4,528 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Your CV Builder</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style/style.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your CV Builder</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        <!-- MAIN HEADER -->
-        <div class="main_nav">
-            <h1>CV Builder by Genial</h1>
+
+    <!-- MAIN HEADER -->
+    <div class="main_nav">
+        <h1>CV Builder by Genial</h1>
+    </div>
+
+    <!-- MAIN CONTAINER FOR INPUT AND RESULTS - START -->
+    <div id="parent_container" class="parent_container">
+        <!-- A SIMPLE DIV FOR THE PROGRESS BAR-->
+
+        <div id="progressContainer" class="progressContainer">
+            <div id="personalProgress" class="progress">
+                <p>PROFILE</p>
+            </div>
+            <div id="professionalProgress" class="progress">
+                <p>EXPERIENCE</p>
+            </div>
+            <div id="educationProgress" class="progress">
+                <p>EDUCATION</p>
+            </div>
+            <div id="skillsProgress" class="progress">
+                <p>SKILLS</p>
+            </div>
+            <div id="langProgress" class="progress">
+                <p>LANGUAGES</p>
+            </div>
+            <div id="certProgress" class="progress">
+                <p>CERTIFICATES</p>
+            </div>
+            <div id="completeProgress" class="progress">
+                <p>COMPLETE</p>
+            </div>
         </div>
 
-        <!-- MAIN CONTAINER FOR INPUT AND RESULTS - START -->
-        <div id="parent_container" class="parent_container">
-                            <!-- A SIMPLE DIV FOR THE PROGRESS BAR-->
-                
-                            <div id="progressContainer" class="progressContainer">
-                                <div id="personalProgress" class="progress"><p>PROFILE</p></div>
-                                 <div id="professionalProgress" class="progress"><p>EXPERIENCE</p></div>
-                                 <div id="educationProgress" class="progress"><p>EDUCATION</p></div>
-                                 <div id="skillsProgress" class="progress"><p>SKILLS</p></div>
-                                 <div id="langProgress" class="progress"><p>LANGUAGES</p></div>
-                                 <div id="certProgress" class="progress"><p>CERTIFICATES</p></div>
-                                 <div id="completeProgress" class="progress"><p>COMPLETE</p></div>
-                             </div>
-            
         <!-- INPUT CONTAINER - START -->
-            <div id="input_container" class="input_mainbox">
+        <div id="input_container" class="input_mainbox">
 
-                <!-- PERSONAL DETAILS - START -->
-                <div id="personalContainer" class="input_container">
+            <!-- PERSONAL DETAILS - START -->
+            <div id="personalContainer" class="input_container">
                 <h2>Personal details</h2>
 
-                    <form id="personalDetailsForm" class="personalDetailsForm" >
-                        
-                        <input type="text" id="firstName" name="firstName" maxlength="25" oninput="realTimeTyping()"  placeholder="Name(s)" required>
-                        <input type="text" id="lastName" name="lastName" maxlength="25" oninput="realTimeTyping()"  placeholder="Surname" required>
-                        <br>
-                        <input type="text" id="jobTitle" name="jobTitle" maxlength="50" oninput="realTimeTyping()"  placeholder="Job Title">
-                        <br>  
-                        <textarea  id="intro" name="intro" maxlength="300" oninput="realTimeTyping()"  placeholder="Brief Intro (300 characters only)" class="longText"></textarea>    
-                        <br>
+                <form id="test-experience-form">
 
-                        <input type="number" id="phone" name="phone" maxlength="15" oninput="realTimeTyping()"  placeholder="Phone" required title="Numbers only, no space between." min=0>
-                        <input type="email" id="email" name="email" maxlength="30" oninput="realTimeTyping()"  placeholder="E-mail">
-                        <input type="text" id="website" name="website" maxlength="50" oninput="realTimeTyping()"  placeholder="Website (optional)" title="Use this format: www.example.com">
-                        <br>
+                    <div id="test-experience-container">
+                        <button type="button" type="button" id="add-experience-btn">+ Add Experience</button>
+                    </div>
 
-                        <input id="homeAddress" name="homeAddress" maxlength="100" oninput="realTimeTyping()"  placeholder="Street No. & Name" >
-                        
-                        <input type="text" id="city" name="city" maxlength="100" oninput="realTimeTyping()"  placeholder="City" required title="City is required" >
+ 
+                    <br><br>
 
-                        <input type="text" id="country" name="country" maxlength="100" oninput="realTimeTyping()"  placeholder="Country">
-                      
-                        <input type="text" id="postalCode" name="postalCode" maxlength="10" oninput="realTimeTyping()"  placeholder="Postal Code" >
-                        
-                        <br>
+                    <button type="button" id="prevBtnProfessional">&leftarrow; BACK </button>
+                    <button type="button" id="nextBtnProfessional">NEXT &rightarrow;</button>
 
-                        <button id="nextBtnPersonal">NEXT &rightarrow; </button>
+                </form>
+            
 
-                    </form>
+
+                <form id="personalDetailsForm" class="personalDetailsForm">
+
+
+                    <input type="text" id="firstName" name="firstName" maxlength="25" oninput="realTimeTyping()"
+                        placeholder="Name(s)" required>
+                    <input type="text" id="lastName" name="lastName" maxlength="25" oninput="realTimeTyping()"
+                        placeholder="Surname" required>
+                    <br>
+                    <input type="text" id="jobTitle" name="jobTitle" maxlength="50" oninput="realTimeTyping()"
+                        placeholder="Job Title">
+                    <br>
+                    <textarea id="intro" name="intro" maxlength="300" oninput="realTimeTyping()"
+                        placeholder="Brief Intro (300 characters only)" class="longText"></textarea>
+                    <br>
+
+                    <input type="number" id="phone" name="phone" maxlength="15" oninput="realTimeTyping()"
+                        placeholder="Phone" required title="Numbers only, no space between." min=0>
+                    <input type="email" id="email" name="email" maxlength="30" oninput="realTimeTyping()"
+                        placeholder="E-mail">
+                    <input type="text" id="website" name="website" maxlength="50" oninput="realTimeTyping()"
+                        placeholder="Website (optional)" title="Use this format: www.example.com">
+                    <br>
+
+                    <input id="homeAddress" name="homeAddress" maxlength="100" oninput="realTimeTyping()"
+                        placeholder="Street No. & Name">
+
+                    <input type="text" id="city" name="city" maxlength="100" oninput="realTimeTyping()"
+                        placeholder="City" required title="City is required">
+
+                    <input type="text" id="country" name="country" maxlength="100" oninput="realTimeTyping()"
+                        placeholder="Country">
+
+                    <input type="text" id="postalCode" name="postalCode" maxlength="10" oninput="realTimeTyping()"
+                        placeholder="Postal Code">
+
+                    <br>
+
+                    <button type="button" id="nextBtnPersonal">NEXT &rightarrow; </button>
+
+                </form>
+            </div>
+            <!-- PERSONAL DETAILS - END -->
+
+
+            <!-- WORK EXPERIENCE - START -->
+            <div id="professionalContainer" class="input_container">
+                <h2>Professional Experience</h2>
+                <div>
+                    <button type="button" type="button">  + Add Experience</button>
                 </div>
-                <!-- PERSONAL DETAILS - END -->
                 
 
-                <!-- WORK EXPERIENCE - START -->
-                <div id="professionalContainer" class="input_container">
-                    <h2>Professional Experience</h2>
-    
-                        <form id="professionalExperienceForm">
-                            <button >- Remove Experience </button>
-                            <br> <br>
-
-                            <input type="text" id="position" name="position" maxlength="50" oninput="realTimeTyping()"  placeholder="Job Title">
+                <form id="professionalExperienceForm">
+                    <button type="button" type="button"><!-- Trash Can SVG -->
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          viewBox="0 0 24 24" 
+                          width="24" 
+                          height="24" 
+                          fill="currentColor">
+                          <path d="M3 6h18v2H3V6zm2 3h14v12c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V9zm4 2v8h2v-8H9zm4 0v8h2v-8h-2zM8 3h8v2H8V3z"/>
+                        </svg>
                         
-                            <input type="text" id="employer" name="employer" maxlength="50" oninput="realTimeTyping()"  placeholder="Company Name">
+                        <!-- Add SVG -->
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          viewBox="0 0 24 24" 
+                          width="24" 
+                          height="24" 
+                          fill="currentColor">
+                          <path d="M12 2c-0.55 0-1 0.45-1 1v8H3c-0.55 0-1 0.45-1 1s0.45 1 1 1h8v8c0 0.55 0.45 1 1 1s1-0.45 1-1v-8h8c0.55 0 1-0.45 1-1s-0.45-1-1-1h-8V3c0-0.55-0.45-1-1-1z"/>
+                        </svg>
+                        
+                        <!-- Edit SVG -->
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          viewBox="0 0 24 24" 
+                          width="24" 
+                          height="24" 
+                          fill="currentColor">
+                          <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zm14.71-9.04c0.39-0.39 0.39-1.02 0-1.41l-2.54-2.54c-0.39-0.39-1.02-0.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                          <path d="M14.06 7.06L15.88 8.88 8.88 15.88H7.06V14.06L14.06 7.06z"/>
+                        </svg>
+                        
+                        <!-- Create SVG -->
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          viewBox="0 0 24 24" 
+                          width="24" 
+                          height="24" 
+                          fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v5h5v2h-5v5h-2v-5H7v-2h5z"/>
+                        </svg>
+                        
+                        </button>
+                    <br> <br>
 
-                            <input type="text" id="workCity" name="workCity" maxlength="50" oninput="realTimeTyping()"  placeholder="City">
+                    <input type="text" id="position" name="position" maxlength="50" oninput="realTimeTyping()"
+                        placeholder="Job Title">
 
-                            <legend for="workStartDate" >Start Date</legend>
-                            <input type="date" id="workStartDate" name="workStartDate" oninput="realTimeTyping()"  placeholder="Start Date">
+                    <input type="text" id="employer" name="employer" maxlength="50" oninput="realTimeTyping()"
+                        placeholder="Company Name">
 
-                            <legend for="workEndDate" >End Date</legend>
-                            <input type="date" id="workEndDate" name="workEndDate" oninput="realTimeTyping()"  placeholder="Start Date">
+                    <input type="text" id="workCity" name="workCity" maxlength="50" oninput="realTimeTyping()"
+                        placeholder="City">
 
-                            <input type="radio" id="workHere"> Still working here
+                    <legend for="workStartDate">Start Date</legend>
+                    <input type="date" id="workStartDate" name="workStartDate" oninput="realTimeTyping()"
+                        placeholder="Start Date">
 
-                            <br>
+                    <legend for="workEndDate">End Date</legend>
+                    <input type="date" id="workEndDate" name="workEndDate" oninput="realTimeTyping()"
+                        placeholder="Start Date">
 
-                            <textarea id="duties" name="duties" maxlength="200" oninput="realTimeTyping()"  placeholder="Your tasks (e.g. resolved equations)"></textarea>
-                            
-                            <br>
-                            
-                            <button>+ Add Experience </button>
+                    <input type="radio" id="workHere"> Still working here
 
-                            <br><br>
+                    <br>
 
-                            <button id="prevBtnProfessional">&leftarrow; BACK </button>
-                            <button id="nextBtnProfessional">NEXT &rightarrow;</button>
-    
-                        </form>
-                    </div>
-                <!-- WORK EXPERIENCE  - END -->                
+                    <textarea id="duties" name="duties" maxlength="200" oninput="realTimeTyping()"
+                        placeholder="Your tasks (e.g. resolved equations)"></textarea>
 
+                    <br>
 
-                <!-- EDUCATION - START -->
-                <div id="educationContainer" class="input_container">
-                    <h2>Education</h2>
-    
-                        <form id="educationForm" name="educationForm">
-                            <button >- Remove Education </button>
-                            <br><br>
-                            <input type="text" id="schoolName" name="schoolName" oninput="realTimeTyping()"  placeholder="School Name">
-                            <br>
-                            <input type="text" id="fieldStudied" name="fieldStudied" oninput="realTimeTyping()"  placeholder="Field Studied">
-                            <select id="degreeLevel" name="degreeLevel">
-                                <option value="1">Certificate</option>
-                                <option value="2">Diploma</option>
-                                <option value="3">Bachelors degree</option>
-                                <option value="4">Postgraduate diploma</option>
-                                <option value="5">Professional certificate</option>
-                                <option value="6">Honours degree</option>
-                                <option value="7">Masters degree</option>
-                                <option value="8">Doctoral degree</option>
-                            </select>
-                            <br>
-                            <input type="date" id="eduStartDate" name="eduStartDate" oninput="realTimeTyping()"  placeholder="Start Date">
-                            <input type="date" id="eduEndDate" name="eduEndDate" oninput="realTimeTyping()"  placeholder="End Date (Graduation)"><br>
-                            
-                            <button >+ Add Education </button>
-                            <br> <br>
+                    <button>+ Add Experience </button>
 
-                            <button id="prevBtnEducation"> &leftarrow; BACK </button>
-                            <button id="nextBtnEducation">NEXT &rightarrow;</button>
+                    <br><br>
 
-                        </form>
-                    </div>
-                    <!-- EDUCATION  - END -->      
-                    
-                    
-                <!-- SKILLS - START -->
-                <div id="skillsContainer" class="input_container">
-                    <h2>Skills</h2>
-    
-                        <form name="skillsForm">
-                            <button >- Remove Skill </button>
-                            <br>
-                            <input type="text" id="skill1" name="skill1" oninput="realTimeTyping()"  placeholder="Skill description" maxlength="25">
-                            <select id="skill1Level" name="skill1Level">
-                                <option value="5">Beginner</option>
-                                <option value="10">Good</option>
-                                <option value="15">Pro</option>
-                                <option value="20">Expert</option>
-                            </select>
-                            <br>
-                            <button >+ Add Skill </button>
-                            <br> <br>
+                    <button type="button" id="prevBtnProfessional">&leftarrow; BACK </button>
+                    <button type="button" id="nextBtnProfessional">NEXT &rightarrow;</button>
 
-                            <button id="prevBtnSkill">&leftarrow; BACK </button>
-                            <button id="nextBtnSkill">NEXT &rightarrow; </button>
-
-                        </form>
-                    </div>
-                    <!-- SKILLS  - END -->        
+                </form>
+            </div>
+            <!-- WORK EXPERIENCE  - END -->
 
 
-                <!-- LANGUAGES - START -->
-                <div id="languagesContainer" class="input_container">
-                    <h2>Languages</h2>
-    
-                        <form name="languagesForm">
-                            
-                            <legend for="language1">Language 1</legend>
-                            <input type="text" id="language1" name="language1">
-                            <select id="language1level" name="skill1Level">
-                                <option value="1">Beginner</option>
-                                <option value="5">Good</option>
-                                <option value="10">Professional</option>
-                                <option value="15">Native</option>
+            <!-- EDUCATION - START -->
+            <div id="educationContainer" class="input_container">
+                <h2>Education</h2>
 
-                            </select>
-                            <br>
+                <form id="educationForm" name="educationForm">
+                    <button>- Remove Education </button>
+                    <br><br>
+                    <input type="text" id="schoolName" name="schoolName" oninput="realTimeTyping()"
+                        placeholder="School Name">
+                    <br>
+                    <input type="text" id="fieldStudied" name="fieldStudied" oninput="realTimeTyping()"
+                        placeholder="Field Studied">
+                    <select id="degreeLevel" name="degreeLevel">
+                        <option value="1">Certificate</option>
+                        <option value="2">Diploma</option>
+                        <option value="3">Bachelors degree</option>
+                        <option value="4">Postgraduate diploma</option>
+                        <option value="5">Professional certificate</option>
+                        <option value="6">Honours degree</option>
+                        <option value="7">Masters degree</option>
+                        <option value="8">Doctoral degree</option>
+                    </select>
+                    <br>
+                    <input type="date" id="eduStartDate" name="eduStartDate" oninput="realTimeTyping()"
+                        placeholder="Start Date">
+                    <input type="date" id="eduEndDate" name="eduEndDate" oninput="realTimeTyping()"
+                        placeholder="End Date (Graduation)"><br>
 
-                            <legend for="language1">Language 2</legend>
-                            <input type="text" id="language2" name="language2">
-                            <select id="language2level" name="language2level">
-                                <option value="1">Beginner</option>
-                                <option value="5">Good</option>
-                                <option value="10">Professional</option>
-                                <option value="15">Native</option>
+                    <button>+ Add Education </button>
+                    <br> <br>
 
-                            </select>
-                            <br>
+                    <button type="button" id="prevBtnEducation"> &leftarrow; BACK </button>
+                    <button type="button" id="nextBtnEducation">NEXT &rightarrow;</button>
+
+                </form>
+            </div>
+            <!-- EDUCATION  - END -->
 
 
-                            <legend for="language1">Language 3</legend>
-                            <input type="text" id="language3" name="language3">
-                            <select id="language3level" name="language3Level">
-                                <option value="1">Beginner</option>
-                                <option value="5">Good</option>
-                                <option value="10">Professional</option>
-                                <option value="15">Native</option>
+            <!-- SKILLS - START -->
+            <div id="skillsContainer" class="input_container">
+                <h2>Skills</h2>
 
-                            </select>
-                            <br>
+                <form name="skillsForm">
+                    <button>- Remove Skill </button>
+                    <br>
+                    <input type="text" id="skill1" name="skill1" oninput="realTimeTyping()"
+                        placeholder="Skill description" maxlength="25">
+                    <select id="skill1Level" name="skill1Level">
+                        <option value="5">Beginner</option>
+                        <option value="10">Good</option>
+                        <option value="15">Pro</option>
+                        <option value="20">Expert</option>
+                    </select>
+                    <br>
+                    <button>+ Add Skill </button>
+                    <br> <br>
 
-                            <button >+ Add Language </button>
-                            <br><br>
+                    <button type="button" id="prevBtnSkill">&leftarrow; BACK </button>
+                    <button type="button" id="nextBtnSkill">NEXT &rightarrow; </button>
 
-                            <button id="prevBtnLang">&leftarrow; BACK </button>
-                            <button id="nextBtnLang">NEXT &rightarrow; </button>
-                        </form>
-                    </div>
-                    <!-- LANGUAGES  - END -->    
-                    
-                    
-                <!-- CERTIFICATE - START -->
-                <!-- OPTIONAL SO, IF STATEMENT SHOULD BE USED-->
-                <div id="certificateContainer" class="input_container">
-                    <h2>Certificates</h2>
-    
-                        <form name="certificateForm">
-                            
-                            <legend for="certificate1">Certificate 1</legend>
-                            <input type="text" id="certificate1" name="certificate1">
-                            <br>
+                </form>
+            </div>
+            <!-- SKILLS  - END -->
 
-                            <legend for="certificate2">Certificate 2</legend>
-                            <input type="text" id="certificate2" name="certificate2">
-                            <br>
 
-                            <legend for="certificate3">Certificate 3</legend>
-                            <input type="text" id="certificate3" name="certificate3">
-                            <br>
-                          
+            <!-- LANGUAGES - START -->
+            <div id="languagesContainer" class="input_container">
+                <h2>Languages</h2>
 
-                            <button >+ Add Certificate </button>
+                <form name="languagesForm">
 
-                            <br> <br>
-                            <button id="prevBtnCert">&leftarrow; BACK </button>
-                            <button id="completeBtn">COMPLETE &checkmark;</button>
-                        </form>
+                    <legend for="language1">Language 1</legend>
+                    <input type="text" id="language1" name="language1">
+                    <select id="language1level" name="skill1Level">
+                        <option value="1">Beginner</option>
+                        <option value="5">Good</option>
+                        <option value="10">Professional</option>
+                        <option value="15">Native</option>
 
-                        <br><br>
-                    </div>
-                    <!-- CERTIFICATE  - END -->   
-                     
-                <!-- PREVIEW -->
-                <div id="preview" class="preview">
-                    
-                    <div class="two_column_text">
-                        <!--COLUMN 1-->
-                        <div class="info_column">
+                    </select>
+                    <br>
+
+                    <legend for="language1">Language 2</legend>
+                    <input type="text" id="language2" name="language2">
+                    <select id="language2level" name="language2level">
+                        <option value="1">Beginner</option>
+                        <option value="5">Good</option>
+                        <option value="10">Professional</option>
+                        <option value="15">Native</option>
+
+                    </select>
+                    <br>
+
+
+                    <legend for="language1">Language 3</legend>
+                    <input type="text" id="language3" name="language3">
+                    <select id="language3level" name="language3Level">
+                        <option value="1">Beginner</option>
+                        <option value="5">Good</option>
+                        <option value="10">Professional</option>
+                        <option value="15">Native</option>
+
+                    </select>
+                    <br>
+
+                    <button>+ Add Language </button>
+                    <br><br>
+
+                    <button type="button" id="prevBtnLang">&leftarrow; BACK </button>
+                    <button type="button" id="nextBtnLang">NEXT &rightarrow; </button>
+                </form>
+            </div>
+            <!-- LANGUAGES  - END -->
+
+
+            <!-- CERTIFICATE - START -->
+            <!-- OPTIONAL SO, IF STATEMENT SHOULD BE USED-->
+            <div id="certificateContainer" class="input_container">
+                <h2>Certificates</h2>
+
+                <form name="certificateForm">
+
+                    <legend for="certificate1">Certificate 1</legend>
+                    <input type="text" id="certificate1" name="certificate1">
+                    <br>
+
+                    <legend for="certificate2">Certificate 2</legend>
+                    <input type="text" id="certificate2" name="certificate2">
+                    <br>
+
+                    <legend for="certificate3">Certificate 3</legend>
+                    <input type="text" id="certificate3" name="certificate3">
+                    <br>
+
+
+                    <button>+ Add Certificate </button>
+
+                    <br> <br>
+                    <button type="button" id="prevBtnCert">&leftarrow; BACK </button>
+                    <button type="button" id="completeBtn">COMPLETE &checkmark;</button>
+                </form>
+
+                <br><br>
+            </div>
+            <!-- CERTIFICATE  - END -->
+
+            <!-- PREVIEW -->
+            <div id="preview" class="preview">
+
+                <div class="two_column_text">
+                    <!--COLUMN 1-->
+                    <div class="info_column">
                         <h2 id="fullName">Your Name</h2>
                         <h3 id="disTitle">Title</h3>
-                        </div>
-                       
-                        <!--COLUMN 2-->
-                        <div class="info_column">
-                        <p id="disPhone">Phone : <span ></span> </p>
+                    </div>
+
+                    <!--COLUMN 2-->
+                    <div class="info_column">
+                        <p id="disPhone">Phone : <span></span> </p>
                         <p id="disEmail">E-mail : </p>
-                        <p id="disAddress"> Address :  </p>
+                        <p id="disAddress"> Address : </p>
                         <p id="disWebsite"></p>
-                        </div>
-
                     </div>
 
-                    <!--BRIEF INTRO-->
+                </div>
+
+                <!--BRIEF INTRO-->
+                <div>
+                    <p id="disIntro">
+                        Here you will write a brief summary about your self such as the title you are applying for, a
+                        short list of your top 3 skills, a motivation to convince the hiring team why you will be an
+                        asset to their company and what you will bring to their company.
+                    </p>
+                </div>
+
+                <div id="disExperienceFullContainer">
                     <div>
-                        <p id="disIntro">
-                            Here you will write a brief summary about your self such as the title you are applying for, a short list of your top 3 skills, a motivation to convince the hiring team why you will be an asset to their company and what you will bring to their company.
-                        </p>
+                        <h3>Professional Experience</h3>
                     </div>
 
-                    <div id="disExperienceFullContainer">
+                    <!--Experience Divs-->
+                    <!--An experience <div> has 3 parts;a year, the position details, and city-->
+                    <div class="three_columns" id="disExperience">
+
+                        <!--Exp Year Div-->
                         <div>
-                            <h3>Professional Experience</h3>
+                            <p id="disWorkYear">May 2024 - January 2025</p>
                         </div>
 
-                        <!--Experience Divs-->
-                        <!--An experience <div> has 3 parts;a year, the position details, and city-->
-                        <div class="three_columns" id="disExperience">
-
-                            <!--Exp Year Div-->
-                            <div>
-                                <p id="disWorkYear">May 2024 - January 2025</p>
-                            </div>                      
-                                                
-                            <!--Exp Role Div-->
-                            <div>
-                                <p id="disRole">Position at Company Name</p>   
-                                <p id="disDuties"> Describe the specific tasks you were performing while you were in this postion. Try to keep it concise and brief. </p>  
-                                
-                            </div>
-
-                            <!--Exp City Div-->
-                            <div>
-                                <p id="disWorkCity">City</span> </p>
-                            </div>                            
-
-
-                        </div>
-
-                    <!--CLOSING DIV FOR EXP CARD-->  
-                    </div>
-
-                    <hr>
-
-                    <!--EDUCATION SECTION START-->
-
-                    <div id="disEducationFullContainer">
+                        <!--Exp Role Div-->
                         <div>
-                            <h3>Education</h3>
-                        </div>
-
-                        <!--Experience Divs-->
-                        <!--An experience <div> has 3 parts;a year, the position details, and city-->
-                        <div class="three_columns" id="disEducation">
-
-                            <!--Exp Year Div-->
-                            <div>
-                                <p id="eduYear">2024 - 2025</p>
-                            </div>                      
-                                                
-                            <!--Exp Role Div-->
-                            <div>
-                                <p id="eduSchool">Name of University or Institution </p>   
-                                <p id="eduDescription"> Level in Major or Specialisation Official Name </p>  
-                                
-                            </div>
-
-                            <!--Exp City Div-->
-                            <div>
-                                <p id="expCity">City</span> </p>
-                            </div>                            
-
+                            <p id="disRole">Position at Company Name</p>
+                            <p id="disDuties"> Describe the specific tasks you were performing while you were in this
+                                postion. Try to keep it concise and brief. </p>
 
                         </div>
 
-                    <!--CLOSING DIV FOR EDUCATION CARD-->  
+                        <!--Exp City Div-->
+                        <div>
+                            <p id="disWorkCity">City</span> </p>
+                        </div>
+
+
                     </div>
 
-                    <hr>
+                    <!--CLOSING DIV FOR EXP CARD-->
+                </div>
 
-                    <!--SKILLS SECTION STARTS-->
-                    <div id="disSkillsFullContainer">
-                        <h3>Core Skills</h3>
-                        <p>Skill Name : Profeciency, Skill Name : Profeciency, Skill Name : Profeciency, Skill Name : Profeciency.</p>
+                <hr>
+
+                <!--EDUCATION SECTION START-->
+
+                <div id="disEducationFullContainer">
+                    <div>
+                        <h3>Education</h3>
+                    </div>
+
+                    <!--Experience Divs-->
+                    <!--An experience <div> has 3 parts;a year, the position details, and city-->
+                    <div class="three_columns" id="disEducation">
+
+                        <!--Exp Year Div-->
+                        <div>
+                            <p id="eduYear">2024 - 2025</p>
+                        </div>
+
+                        <!--Exp Role Div-->
+                        <div>
+                            <p id="eduSchool">Name of University or Institution </p>
+                            <p id="eduDescription"> Level in Major or Specialisation Official Name </p>
+
+                        </div>
+
+                        <!--Exp City Div-->
+                        <div>
+                            <p id="expCity">City</span> </p>
+                        </div>
+
+
+                    </div>
+
+                    <!--CLOSING DIV FOR EDUCATION CARD-->
+                </div>
+
+                <hr>
+
+                <!--SKILLS SECTION STARTS-->
+                <div id="disSkillsFullContainer">
+                    <h3>Core Skills</h3>
+                    <p>Skill Name : Profeciency, Skill Name : Profeciency, Skill Name : Profeciency, Skill Name :
+                        Profeciency.</p>
 
                     <!--CLOSING SKILLS SECTION-->
-                    </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <!--LANGUAGES SECTION STARTS-->
-                    <div id="disLanguagesFullContainer">
-                        <h3>Languages</h3>
-                        <p>Language Name : Profeciency. <br>
-                            Language Name : Profeciency. <br>
-                            Language Name : Profeciency. <br>
-                        </p>
+                <!--LANGUAGES SECTION STARTS-->
+                <div id="disLanguagesFullContainer">
+                    <h3>Languages</h3>
+                    <p>Language Name : Profeciency. <br>
+                        Language Name : Profeciency. <br>
+                        Language Name : Profeciency. <br>
+                    </p>
 
                     <!--CLOSING LANGUAGES SECTION-->
-                    </div>
+                </div>
 
-                    <!--CERTIFICATES SECTION STARTS-->
-                    <div id="disLanguagesFullContainer">
-                        <h3>Certificates / Awards</h3>
-                        <p>Certificate Name. <br>
-                            Certificate Name. <br>
-                            Certificate Name. <br>
-                        </p>
+                <!--CERTIFICATES SECTION STARTS-->
+                <div id="disLanguagesFullContainer">
+                    <h3>Certificates / Awards</h3>
+                    <p>Certificate Name. <br>
+                        Certificate Name. <br>
+                        Certificate Name. <br>
+                    </p>
 
                     <!--CLOSING CERTIFICATES SECTION-->
-                    </div>                   
-
-
-
-                <!-- PREVIEW END -->  
                 </div>
-                <!-- PREVIEW END -->  
 
 
 
+                <!-- PREVIEW END -->
             </div>
-            <!-- INPUT CONTAINER - END-->
-            
-       
-        
+            <!-- PREVIEW END -->
+
+
+
+        </div>
+        <!-- INPUT CONTAINER - END-->
+
+
+
         <!-- --------------- SEPARATION BETWEEN INPUT AND RESULTS ---------------- -->
 
 
-            <!-- RESULTS CONTAINER - START -->
-            <div id="resultsContainer" class="resultsContainer">
-                <h1>FINAL CV IS THIS </h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Sequi nemo tenetur suscipit esse veritatis saepe nisi minima? 
-                    Earum culpa, nihil beatae illo animi, quam dignissimos sit ipsum dolores temporibus molestiae!</p>
+        <!-- RESULTS CONTAINER - START -->
+        <div id="resultsContainer" class="resultsContainer">
+            <h1>FINAL CV IS THIS </h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Sequi nemo tenetur suscipit esse veritatis saepe nisi minima?
+                Earum culpa, nihil beatae illo animi, quam dignissimos sit ipsum dolores temporibus molestiae!</p>
 
-            </div>
-            <!-- RESULTS CONTAINER - END -->
-            
-        
         </div>
-        <!-- MAIN CONTAINER FOR INPUT AND RESULTS -END -->
-        
+        <!-- RESULTS CONTAINER - END -->
 
 
-        <script src="scripts/cv_builder.js" async defer></script>
-    </body>
+    </div>
+    <!-- MAIN CONTAINER FOR INPUT AND RESULTS -END -->
+
+
+
+    <script src="scripts/cv_builder.js" async defer>
+    </script>
+    
+
+</body>
+
 </html>
