@@ -147,6 +147,7 @@ const disExperienceFullContainer = document.getElementById(
 
 function realTimeTyping() {
   //For the personal details
+  const jobs = document.getElementById
 
   //the id "fullName" is concatenation of the first and last name inputs
   //For other details, the 2 lines above gets the value the one below prints
@@ -186,7 +187,7 @@ function realTimeTyping() {
   const position = document.getElementById("position").value;
   const disRole = (document.getElementById(
     "disRole"
-  ).innerHTML = `<b>${position}</b> at ${employer} `);
+  ).innerHTML = `<strong>${position} at ${employer}</strong> `);
 
   const workStartDate = document.getElementById("workStartDate").value;
   const workHere = document.getElementById("workHere");
@@ -197,12 +198,17 @@ function realTimeTyping() {
 
   const formattedDate = (document.getElementById(
     "disWorkYear"
-  ).innerHTML = `${workStartDate.substring(0, 7)} - ${workEndDate} `);
+  ).innerHTML = `${workStartDate.substring(0, 4)} - ${workEndDate.substring(0, 4)} <br>`);
 
   const duties = document.getElementById("duties").value;
   const disDuties = (document.getElementById(
-    "disRole"
-  ).innerHTML = `<b>${position}</b> at ${employer} `);
+    "disDuties"
+  ).innerHTML = `<br><li>${duties}</li>`);
+
+  const workCity = document.getElementById("workCity").value;
+  const disCity = (document.getElementById(
+    "disWorkCity"
+  ).innerHTML = `${workCity}`);
 
   //For the eduction details
 }
@@ -349,8 +355,8 @@ addExperienceBtn.addEventListener("click", function () {
 
                     <br>
 
-                    <textarea id='duties' name='duties' maxlength='200' oninput='realTimeTyping()'
-                        placeholder='Your tasks (e.g. resolved equations)'></textarea>
+                    <textarea id='duties' name='duties' maxlength='255' oninput='realTimeTyping()'
+                        placeholder='Your tasks (e.g. resolved equations)' rows=8></textarea>
 
                     <br>
                                             <button type="button" id="saveBtn">
@@ -370,11 +376,28 @@ addExperienceBtn.addEventListener("click", function () {
   experienceContainer.appendChild(MiniForm);
 
   MiniForm.querySelector('#saveBtn').addEventListener("click", () =>{
-      alert("saved");
+
       const jobTitle = MiniForm.querySelector("#position").value;
       const employer = MiniForm.querySelector("#employer").value;
       const workStartDate = MiniForm.querySelector("#workStartDate").value;
       const workEndDate = MiniForm.querySelector("#workEndDate").value;
+
+      const summary = document.createElement("div");
+      summary.className = "one_column_text";
+      summary.innerHTML = `<p><strong> ${jobTitle} </strong> at ${employer}. From ${workStartDate.substring(0,4)} to ${workEndDate.substring(0,4)} </p>
+                            `;
+
+                           // MiniForm.style.display = "none";
+
+                           MiniForm.replaceWith(summary);
+
+                            summary.addEventListener("click", () =>{
+                              summary.replaceWith(MiniForm);
+                            })
+                          //  experienceContainer.appendChild(summary);
+
+
+
   });
 
 
